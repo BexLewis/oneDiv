@@ -1,0 +1,285 @@
+/* =============
+    One Div
+============= */
+div {
+    @include sm {
+        background-color: rgb(70, 176, 90);
+    }
+    @include md {
+        background-color: rgb(235, 169, 77);
+    }
+    @include lg{
+        background-color: rgb(227, 73, 98);
+    }
+    @include xl{
+        background-color: rgb(50, 146, 186);
+    }
+
+    #oneDiv {
+        @include sm {
+            //Cheese!
+            animation-name: spin;
+            animation-duration: 1000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            display: block;
+            width: 250px;
+            height: 250px;
+            background: rgb(254, 215, 58);
+            border-radius: 200px;
+            background-image: linear-gradient(to top,transparent 22%, rgb(246, 189, 3));
+            box-shadow: 0 5px 7px 0px rgba(0, 0, 0, 0.3);
+        }
+        //Mouse
+        @include md {
+            animation-name: floating;
+            animation-duration: 300ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            @keyframes floating {
+                from {
+                    transform: translate(0, 0px);
+                }
+
+                65% {
+                    transform: translate(0, 15px);
+                }
+
+                to {
+                    transform: translate(0, -0px);
+                }
+            }
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: rgb(67, 119, 171);
+            border-radius: 200px;
+            background-image: linear-gradient(to top,transparent 22%, rgb(75, 151, 227));
+            box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3),
+            -50px -40px 0px -20px rgba(207, 115, 99,0.8),
+            -60px -50px 0px -10px rgba(240, 132, 113,0.8),
+            -70px -60px 0px 4px rgb(76, 141, 199),
+            50px -40px 0px -20px rgba(207, 115, 99,0.8),
+            60px -50px 0px -10px rgba(240, 132, 113,0.8),
+            70px -60px 0px 4px rgb(76, 141, 199),
+            70px -54px 2px 1px rgba(0, 0, 0, 0.2),
+            -70px -54px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+//Cat
+    @include lg{
+        animation-name: floating;
+        animation-duration: 500ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        @keyframes floating {
+            from {
+                transform: translate(0, 0px);
+            }
+
+            65% {
+                transform: translate(0, 15px);
+            }
+
+            to {
+                transform: translate(0, -0px);
+            }
+        }
+        display: block;
+        width: 250px;
+        height: 250px;
+        background: rgb(59, 56, 55);
+        border-radius: 200px;
+        background-image: linear-gradient(to top,transparent 22%, rgb(28, 27, 27));
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
+
+    }
+//Dog
+    @include xl{
+        animation-name: floating;
+        animation-duration: 250ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        @keyframes floating {
+            from {
+                transform: translate(0, 0px);
+            }
+
+            65% {
+                transform: translate(0, 15px);
+            }
+
+            to {
+                transform: translate(0, -0px);
+            }
+        }
+        display: block;
+        width: 250px;
+        height: 300px;
+        background: rgb(207, 181, 109);
+        border-radius: 80px;
+        background-image: linear-gradient(to top,transparent 22%, rgb(212, 157, 68));
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3),
+
+    }
+
+
+    }
+
+    #oneDiv:before {
+        //Cheese!
+        @include sm {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 200px;
+            margin-top: 100px;
+            margin-left: 200px;
+            background: rgb(220, 132, 18);
+            box-shadow: -40px 70px 0 7px rgb(220, 132, 18), -40px 70px 0 10px rgba(180, 109, 3, 0.67), -140px -56px 0 14px rgb(220, 132, 18), -140px -62px 3px 7px rgba(182, 111, 5,0.4), -140px -56px 0 14px rgb(220, 132, 18), -150px 60px 0 20px rgb(220, 132, 18), -70px -110px 0 5px rgb(70, 176, 90), -72px -102px 0 6px rgb(220, 132, 18),
+            ;
+        }
+        //Mouse
+        @include md {
+            content: "";
+            display: block;
+            width: 48px;
+            height: 60px;
+            margin-top: 60px;
+            margin-left: 1px;
+            background: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            border-top: solid 70px rgb(65, 127, 181);
+            border-left: solid 25px transparent;
+            border-right: solid 25px transparent;
+            border-bottom: solid 30px transparent;
+        }
+        //Cat
+        @include lg{
+            content: "";
+            display: block;
+            //width: 250px;
+            width: 90px;
+              height: 30px;
+              border-top: solid 50px rgb(227, 73, 98);
+              border-left: solid 30px transparent;
+              border-right: solid 30px transparent;
+              margin-top:0px;
+              margin-left: 50px;
+              //CAN USE BORDER RADIUS TO MAKE CURVES FOUND OUT WHEN MAKING THE DOG SO OH WELL//
+        }
+        //Dog
+        @include xl{
+            display:block;
+            width: 80px;
+            height:100px;
+            border-radius: 35px;
+            background-color: rgb(89, 47, 40);
+            border:1px solid transparent ;
+            margin-left:-30px;
+            box-shadow:
+            225px 0px 0 0px rgb(89, 47, 40),
+            30px 70px 0 -20px rgb(0, 0, 0),
+            140px 70px 0 -20px rgb(0, 0, 0),
+            60px 70px 0 10px rgb(199, 208, 212),
+            170px 70px 0 10px rgb(199, 208, 212),
+            80px 150px 0 -35px rgb(186, 138, 61),
+            80px 160px 0 -35px rgb(89, 47, 40),
+            50px 150px 0 -35px rgb(186, 138, 61),
+            50px 160px 0 -35px rgb(89, 47, 40),
+            65px 180px 0 -35px rgb(186, 138, 61),
+            65px 190px 0 -35px rgb(89, 47, 40),
+            160px 150px 0 -35px rgb(186, 138, 61),
+            160px 160px 0 -35px rgb(89, 47, 40),
+            130px 150px 0 -35px rgb(186, 138, 61),
+            130px 160px 0 -35px rgb(89, 47, 40),
+            145px 180px 0 -35px rgb(186, 138, 61),
+            145px 190px 0 -35px rgb(89, 47, 40),
+            80px 180px 0 5px rgb(186, 138, 61),
+            150px 180px 0 5px rgb(186, 138, 61);
+        }
+    }
+}
+
+#oneDiv:after {
+    //Mouse
+    @include md {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(214, 109, 146);
+        border-radius: 200px;
+        margin-top: -103px;
+        margin-left: 20px;
+        box-shadow:
+        15px -95px 0 -26px rgba(199, 208, 212,0.5),
+        -35px -95px 0 -26px rgba(199, 208, 212,0.5),
+        14px -90px 0 -20px rgb(0, 0, 0),
+        -34px -90px 0 -20px rgb(0, 0, 0),
+        -24px -90px 0 -6px rgb(199, 208, 212),
+        24px -90px 0 -6px rgb(199, 208, 212),
+        -24px -100px 0 -5px rgb(75, 140, 196),
+        -24px -110px 0 -12px rgb(64, 87, 145),
+        24px -100px 0 -5px rgb(75, 140, 196),
+        24px -110px 0 -12px rgb(64, 87, 145),
+        23px -83px 3px -8px rgba(0,0,0,0.4),
+        -23px -83px 3px -8px rgba(0,0,0,0.4),
+        23px -80px 0 -8px rgb(109, 91, 143),
+        -23px -80px 0 -8px rgb(109, 91, 143),
+        0px 4px 2px 1px rgba(0, 0, 0, 0.2),
+    }
+    //Cat
+    @include lg{
+        display: block;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        border-radius: 200px;
+        box-shadow: none;
+        margin-top: 30px;
+        margin-left: 90px;
+        box-shadow:
+        0px 30px 0 2px rgb(43, 42, 42),
+        -5px 20px 0 2px rgb(43, 42, 42),
+        10px 20px 0 2px rgb(43, 42, 42),
+        62px 30px 0 2px rgb(43, 42, 42),
+        70px 20px 0 2px rgb(43, 42, 42),
+        55px 20px 0 2px rgb(43, 42, 42),
+        55px 30px 0 30px rgb(56, 53, 53),
+        15px 30px 0 30px rgb(56, 53, 53),
+        35px 30px 0 30px rgb(214, 109, 146),
+        35px 50px 0 30px rgb(214, 109, 146),
+        35px 50px 0 49px rgb(0, 0, 0),
+        90px 10px 0 60px rgb(56, 53, 53),
+        -20px 10px 0 60px rgb(56, 53, 53),
+        65px -40px 0 20px rgb(0, 0, 0),
+        -45px -40px 0 20px rgb(0, 0, 0),
+        90px -20px 0 50px rgb(199, 208, 212),
+        -20px -20px 0 50px rgb(199, 208, 212),
+
+    }
+    //Dog
+    @include xl{
+        display: block;
+        width: 130px;
+        height: 50px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 200px;
+        margin-top: -45px;
+        margin-left: 0px;
+        box-shadow:
+        120px 0px 0 0px rgb(0, 0, 0),
+        60px 100px 0 -15px rgb(0, 0, 0),
+    }
+}
